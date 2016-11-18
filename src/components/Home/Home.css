@@ -1,0 +1,26 @@
+.Home-start {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #F2D5AD;
+}
+
+.Home-start a {
+    text-decoration: none;
+    color: #895135;
+    padding: 15px 85px;
+}
+
+.Home-title {
+    color: #895135;
+    font-size: 20px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    max-width: 240px;
+    text-align: center;
+}
+
+.Home-description {
+    font-style: italic;
+}

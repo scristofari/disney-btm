@@ -1,0 +1,15 @@
+.Quiz-question {
+    padding-bottom: 30px;
+}
+
+.Quiz-answer {
+    padding: 15px;
+    border-top: 1px solid black;
+    min-width: 250px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Quiz-answer:last-child {
+    border-bottom: 1px solid black;
+}

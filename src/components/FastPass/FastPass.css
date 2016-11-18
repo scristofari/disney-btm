@@ -1,0 +1,28 @@
+.FastPass {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+    padding: 15px;
+    align-items: center;
+}
+
+.FastPass span {
+    margin-bottom: 10px;
+}
+
+.FastPass img {
+    max-width: 100%;
+    height: 60px;
+}
+
+.FastPass-date {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.FastPass-title {
+    background: #F2D5AD;
+    color: #895135;
+    padding: 10px;
+}
