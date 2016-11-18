@@ -11,7 +11,7 @@ class Home extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="Home-intro">
-        Home
+          Home
         </p>
       </div>
     );
