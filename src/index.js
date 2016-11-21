@@ -1,20 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout'
+import store from './store'
 
-import '../node_modules/foundation-sites/dist/foundation-flex.css';
+const app = document.getElementById('root')
 
-ReactDOM.render(
-  <div className="layout">
-    <Header />
-    <Router history={browserHistory}>
-      <Route path="/" component={Home}/>
-      <Route path="/about" component={About}/>
-    </Router>
-  </div>
-  , document.getElementById('root')
-)
+ReactDOM.render(<Provider store={store}><Layout /></Provider>, app)
