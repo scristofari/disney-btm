@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { Router, browserHistory } from 'react-router'
 
 import Home from '../Home/Home'
@@ -25,11 +24,5 @@ class Layout extends React.Component {
     );
   }
 }
-
-Layout = connect((store) => {
-    return {
-        name: store.user.user.name
-    }
-})(Layout)
 
 export default Layout;
