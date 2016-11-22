@@ -1,21 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Router, Route, browserHistory } from 'react-router'
+import { Router, browserHistory } from 'react-router'
 
 import Home from '../Home/Home'
 import About from '../About/About'
 import Header from '../Header/Header'
 
+const routes = [{
+    path: '/',
+    component: Home,
+},        
+{ 
+    path: '/about',
+    component: About 
+}];
+
 class Layout extends React.Component {
-  render() {
-      console.log(this.props);
+    render() {
       return (
         <div className="layout">
             <Header />
-            <Router history={browserHistory}>
-            <Route path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-            </Router>
+            <Router history={browserHistory} routes={routes}/>
         </div>
     );
   }
