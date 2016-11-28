@@ -1,29 +1,37 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { fetchUser } from '../../actions/userActions' 
+import { userLogin, userLogout } from '../../actions/userActions' 
 
 class UserLoginButton extends React.Component {
-    componentWillMount() {
-        //this.props.dispatch()
+    userLogin(e) {
+        this.props.dispatch(userLogin())
     }
-
-    userLog(e) {
-        this.props.dispatch(fetchUser())
+    
+    userLogout(e) {
+        this.props.dispatch(userLogout())
     }
 
     render() {
-      return (
-        <div className="user-login-button">
-            <button onClick={this.userLog.bind(this)}>Login with {this.props.name}</button>
-        </div>
-    );
-  }
+        if ( this.props.name === null ) {
+            return (
+                <div className="user-login-button">
+                    <button onClick={this.userLogin.bind(this)}>Login with Google</button>
+                </div>
+            )
+        }
+        return (
+            <div className="user--login--pseudo">
+                Hello, {this.props.name}
+                <button onClick={this.userLogout.bind(this)}>Logout</button>
+            </div>
+        );
+    }
 }
 
 UserLoginButton = connect((store) => {
     return {
-        name: store.user.user.name
+        name: ( store.user.user ) ? store.user.user.name : null
     }
 })(UserLoginButton)
 

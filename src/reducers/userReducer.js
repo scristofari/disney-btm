@@ -1,16 +1,37 @@
 export default function reducer(state={
-    user: {
-        name: "Bob"
-    },
-    error: null
+    user: null,
+    error: null,
+    initialized: false
 }, action) {
     switch (action.type) {
-        case 'FETCH_USER_FULFILLED':
-            state = Object.assign({}, state.user, {
-                user: {
-                    name: action.payload
+        case 'USER_AUTH_ERROR':
+            state = Object.assign({}, state, {
+                error: {
+                    message: action.payload.Q.message
                 }
             })
+            break;
+        case 'USER_AUTH_LOGOUT_SUCCESS':
+            state = Object.assign({}, state, {
+                user: null
+            })
+            break;
+        case 'USER_AUTH_SUCCESS':
+        case 'USER_AUTH_INIT':
+            if ( action.payload ) {
+                state = Object.assign({}, state, {
+                    user: {
+                        uid: action.payload.uid,
+                        name: action.payload.displayName
+                    },
+                    initialized: true
+                })
+            } else {
+                state = Object.assign({}, state, {
+                    user: null,
+                    initialized: true
+                })
+            }
             break;
         default:
             //console.log('Action not implemented');
