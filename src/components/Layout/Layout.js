@@ -12,7 +12,7 @@ class Layout extends React.Component {
     componentWillMount() {
         this.props.dispatch(userInit())
     }
-
+    
     render() {
         if ( this.props.initialized ) {
             return (
