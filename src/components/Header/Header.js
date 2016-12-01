@@ -1,13 +1,22 @@
 import React from 'react';
+import Menu from '../Menu/Menu'
+import UserLogin from '../UserLogin/UserLogin'
 
-import UserLoginButton from '../UserLoginButton/UserLoginButton'
+import './Header.css'
 
 class Header extends React.Component {
   render() {
     return (
       <div className="Header">
-      Header !!!!
-      <UserLoginButton />
+        <div className="Header--left">
+            <Menu />
+        </div>
+        <div className="Header--center">
+            SocialTV
+        </div>
+        <div className="Header--right">
+            <UserLogin />
+        </div>
       </div>
     );
   }

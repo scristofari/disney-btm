@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import Header from '../Header/Header'
+import { routes } from '../../routing'
+import { userInit } from '../../actions/userActions'
 import { Router, browserHistory } from 'react-router'
 
-import { userInit } from '../../actions/userActions'
-import { routes } from '../../routing' 
-
-import Header from '../Header/Header'
+import '../../../node_modules/normalize.css/normalize.css'
+import '../../../node_modules/font-awesome/css/font-awesome.css'
 
 class Layout extends React.Component {
     componentWillMount() {

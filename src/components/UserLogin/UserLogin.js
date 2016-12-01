@@ -1,9 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import { userLogin, userLogout } from '../../actions/userActions' 
 
-class UserLoginButton extends React.Component {
+class UserLogin extends React.Component {
     userLogin(e) {
         this.props.dispatch(userLogin())
     }
@@ -16,23 +15,23 @@ class UserLoginButton extends React.Component {
         if ( this.props.name === null ) {
             return (
                 <div className="user-login-button">
-                    <button onClick={this.userLogin.bind(this)}>Login with Google</button>
+                    <button type='button' className='button' onClick={this.userLogin.bind(this)}>Login with Google</button>
                 </div>
             )
         }
         return (
             <div className="user--login--pseudo">
                 Hello, {this.props.name}
-                <button onClick={this.userLogout.bind(this)}>Logout</button>
+                <button type='button' className='button' onClick={this.userLogout.bind(this)}>Logout</button>
             </div>
         );
     }
 }
 
-UserLoginButton = connect((store) => {
+UserLogin = connect((store) => {
     return {
         name: ( store.user.user ) ? store.user.user.name : null
     }
-})(UserLoginButton)
+})(UserLogin)
 
-export default UserLoginButton;
+export default UserLogin;

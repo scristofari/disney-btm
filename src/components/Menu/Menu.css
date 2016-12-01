@@ -1,0 +1,8 @@
+.Menu--list {
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu--list .menu-item {
+    display: block;
+}
