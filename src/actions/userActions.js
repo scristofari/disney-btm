@@ -1,12 +1,8 @@
-import firebase from 'firebase';
-import { config } from '../config';
-
-const firebaseApp = firebase.initializeApp(config);
-const firebaseAuth = firebaseApp.auth();
+import { firebaseAuth, GoogleProvider } from '../firebase';
 
 export function userLogin() {
     return dispatch => {
-        firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+        firebaseAuth.signInWithPopup(GoogleProvider)
             .then(result => dispatch(signInSuccess(result)))
             .catch(error => dispatch(signInError(error)));
     };
