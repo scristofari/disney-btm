@@ -34,7 +34,7 @@ class Menu extends React.Component {
 
 Menu = connect((store) => {
     return {
-        isOpen: store.menu.isOpen
+        isOpen: store.menu.isOpen,
     }
 })(Menu)
 

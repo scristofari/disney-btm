@@ -11,9 +11,6 @@ class Header extends React.Component {
         <div className="Header--left">
             <Menu />
         </div>
-        <div className="Header--center">
-            SocialTV
-        </div>
         <div className="Header--right">
             <UserLogin />
         </div>
