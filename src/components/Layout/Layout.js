@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Header from '../Header/Header'
 import { routes } from '../../routing'
 import { userInit } from '../../actions/userActions'
 import { Router, browserHistory } from 'react-router'
@@ -17,7 +16,6 @@ class Layout extends React.Component {
         if ( this.props.initialized ) {
             return (
                 <div className="layout">
-                    <Header />
                     <Router history={browserHistory} routes={routes}/>
                 </div>
             )

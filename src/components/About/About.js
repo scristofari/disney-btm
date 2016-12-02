@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from '../Header/Header'
 
 class About extends React.Component {
   render() {
     return (
       <div className="About">
-      ABOUTT !!!!
+        <Header />
+        ABOUTT !!!!
       </div>
     );
   }

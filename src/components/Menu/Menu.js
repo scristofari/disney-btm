@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
 import { toggleMenu } from '../../actions/menuActions'
 
 import './Menu.css'
@@ -22,8 +23,8 @@ class Menu extends React.Component {
         <div className="fa fa-bars" onClick={this.toggleMenu.bind(this)}></div>
         <div className="Menu--list">
           <div className="Menu--list--close fa fa-close" onClick={this.toggleMenu.bind(this)}></div>
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
+          <Link to={`/`}>Home</Link>
+          <Link to={`/about`}>About</Link>
         </div>
         <div className="Menu--shadow" onClick={this.toggleMenu.bind(this)}></div>
       </div>

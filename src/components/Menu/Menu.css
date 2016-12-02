@@ -16,10 +16,6 @@
     height: 100%;
 }
 
-.Menu--list .menu-item {
-    display: block;
-}
-
 .Menu--list--close {
     position: absolute;
     right: 15px;
