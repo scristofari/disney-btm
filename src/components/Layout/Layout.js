@@ -10,6 +10,9 @@ import store from '../../store'
 import '../../../node_modules/normalize.css/normalize.css'
 import '../../../node_modules/font-awesome/css/font-awesome.css'
 
+import './Layout.css'
+import logo from './logo.svg';
+
 const history = syncHistoryWithStore(browserHistory, store)
 
 class Layout extends React.Component {
@@ -18,7 +21,7 @@ class Layout extends React.Component {
     }
     
     render() {
-        if ( this.props.initialized ) {
+       if ( this.props.initialized ) {
             return (
                 <div className="layout">
                     <Router history={history} routes={routes}/>
@@ -26,8 +29,10 @@ class Layout extends React.Component {
             )
         }
         return (
-            <div className="layout">
-                INIT
+            <div className="layout layout--init">
+                <div className="layout--center">
+                    <img src={logo} className="layout--center--logo" alt="logo" />
+                </div>
             </div>
         )
   }
