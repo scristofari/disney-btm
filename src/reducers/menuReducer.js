@@ -9,7 +9,6 @@ export default function reducer(state={
             state = Object.assign({}, state, { isOpen: false })
             break;
         default:
-            //console.log('Action not implemented');
             break;
     }
     return state;
