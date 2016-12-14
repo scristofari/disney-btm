@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import './Home.css';
 import btm_logo from './btm_logo.jpg'
@@ -13,8 +14,8 @@ class Home extends React.Component {
       <div className="Home" style={imgStyle}>
         <div className="Home-container">
           <span>Welcome to the Big Thunder Mountains Quiz.</span>
-          <span>Play and win some dysney goodies.</span>
-          <button>Start</button>
+          <span>Play and win some disney goodies or fast pass.</span>
+          <Link to={`/quiz/1`}>Start</Link>
         </div>
       </div>
     );

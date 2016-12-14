@@ -1,5 +1,5 @@
 import Home from './components/Home/Home'
-import Quiz from './components/Quiz/Quiz'
+import Game from './components/Game/Game'
 
 export const routes = [{
     path: '/',
@@ -7,5 +7,5 @@ export const routes = [{
 },        
 { 
     path: '/quiz/1',
-    component: Quiz 
+    component: Game 
 }];
