@@ -1,11 +1,11 @@
 import Home from './components/Home/Home'
-import About from './components/About/About'
+import Quiz from './components/Quiz/Quiz'
 
 export const routes = [{
     path: '/',
     component: Home,
 },        
 { 
-    path: '/about',
-    component: About 
+    path: '/quiz/1',
+    component: Quiz 
 }];
