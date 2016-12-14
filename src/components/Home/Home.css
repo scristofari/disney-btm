@@ -10,3 +10,16 @@
     text-decoration: none;
     color: #895135;
 }
+
+.Home-title {
+    color: #895135;
+    font-size: 20px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    max-width: 240px;
+    text-align: center;
+}
+
+.Home-description {
+    font-style: italic;
+}

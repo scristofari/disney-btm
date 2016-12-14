@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { nextQuiz } from '../../actions/quizAction'
+import './Quiz.css'
 
 class Quiz extends React.Component {
 
@@ -17,13 +18,13 @@ class Quiz extends React.Component {
       backgroundImage: 'url(' + quiz.image +')'
     }
     const answers = quiz.answers.map((x, i) =>
-      <span className="Quizz-answer" key={i} data-score={x.score} onClick={this._answer.bind(this, x.score)}>{x.label}</span>
+      <span className="Quiz-answer" key={i} data-score={x.score} onClick={this._answer.bind(this, x.score)}>{x.label}</span>
     );
 
     return (
       <div className="Quiz page" style={imgStyle}>
         <div className="Quiz-container container">
-          <span>{quiz.question}</span>
+          <span className="Quiz-question">{quiz.question}</span>
           {answers}
         </div>
       </div>

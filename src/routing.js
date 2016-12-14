@@ -1,6 +1,7 @@
 import Home from './components/Home/Home'
 import Game from './components/Game/Game'
 import FastPass from './components/FastPass/FastPass'
+import Result from './components/Result/Result'
 
 export const routes = [{
     path: '/',
@@ -13,4 +14,8 @@ export const routes = [{
 { 
     path: '/fastpass',
     component: FastPass 
+},
+{ 
+    path: '/result',
+    component: Result 
 }];
