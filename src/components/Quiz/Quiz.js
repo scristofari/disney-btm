@@ -5,13 +5,11 @@ import { connect } from 'react-redux'
 import { nextQuiz } from '../../actions/quizAction'
 
 class Quiz extends React.Component {
-  constructor() {
-    super()
-    this._answer.bind(this);
-  }
 
   _answer(score) {
-    this.props.dispatch(nextQuiz(score))
+    setTimeout(() => {
+        this.props.dispatch(nextQuiz(score))
+    }, 2000)
   }
 
   render() { 
@@ -20,7 +18,7 @@ class Quiz extends React.Component {
       backgroundImage: 'url(' + quiz.image +')'
     }
     const answers = quiz.answers.map((x, i) =>
-      <span key={i} onClick={this._answer.bind(this, x.score)}>{x.label}</span>
+      <span key={i} data-score={x.score} onClick={this._answer.bind(this, x.score)}>{x.label}</span>
     );
 
     return (

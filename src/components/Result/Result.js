@@ -1,5 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
+
+import FastPass from '../FastPass/FastPass'
 
 import background from './resto_cendrillon.jpg'
 
@@ -13,6 +16,10 @@ class Result extends React.Component {
       <div className="Result page" style={imgStyle}>
         <div className="Result-container container">
             {this.props.score} / {this.props.data.length}
+
+            <FastPass />
+
+            <Link to={`/`}>Return</Link>
         </div>
       </div>
     );

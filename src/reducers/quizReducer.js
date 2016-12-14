@@ -1,6 +1,6 @@
 import data from '../fixtures/quiz'
 
-export default function reducer(state={
+export default function reducer(state = {
     step: 0,
     score: 0,
     finished: false,
@@ -9,14 +9,22 @@ export default function reducer(state={
     switch (action.type) {
         case 'QUIZ_NEXT':
             state.score += action.payload
-            if ( state.step + 1 < state.data.length ) {
-                state = Object.assign({}, state, { step: state.step + 1 })
+            if (state.step + 1 < state.data.length) {
+                state = Object.assign({}, state, {
+                    step: state.step + 1
+                })
             } else {
-                state = Object.assign({}, state, { finished: true })
+                state = Object.assign({}, state, {
+                    finished: true
+                })
             }
             break;
         case '@@router/LOCATION_CHANGE':
-            state = Object.assign({}, state, { step: 0, score: 0 })
+            state = Object.assign({}, state, {
+                step: 0,
+                score: 0,
+                finished: false
+            })
             break;
         default:
             break;

@@ -12,7 +12,7 @@ class Home extends React.Component {
     return (
       <div className="Home page" style={imgStyle}>
         <div className="Home-container container">
-          <span>Welcome to the Big Thunder Mountains Quiz.</span>
+          <span>Welcome to the Big Thunder Mountain Quiz.</span>
           <span>Play and win some disney goodies or fast pass.</span>
           <Link to={`/quiz/1`}>Start</Link>
         </div>
