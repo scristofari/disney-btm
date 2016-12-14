@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 
 import { nextQuiz } from '../../actions/quizAction'
 
-import './Quiz.css';
-
 class Quiz extends React.Component {
   constructor() {
     super()
@@ -26,8 +24,8 @@ class Quiz extends React.Component {
     );
 
     return (
-      <div className="Quiz" style={imgStyle}>
-        <div className="Quiz-container">
+      <div className="Quiz page" style={imgStyle}>
+        <div className="Quiz-container container">
           <span>{quiz.question}</span>
           {answers}
           <div className="Quiz-return">

@@ -8,6 +8,8 @@ import store from '../../store'
 import '../../../node_modules/normalize.css/normalize.css'
 import '../../../node_modules/font-awesome/css/font-awesome.css'
 
+import './Layout.css'
+
 const history = syncHistoryWithStore(browserHistory, store)
 
 class Layout extends React.Component

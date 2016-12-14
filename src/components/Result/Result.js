@@ -1,13 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import './Result.css';
+import background from './resto_cendrillon.jpg'
 
 class Result extends React.Component {
   render() {
+    const imgStyle = {
+      backgroundImage: 'url(' + background + ')'
+    };
+
     return (
-      <div className="Result">
-        {this.props.score}
+      <div className="Result page" style={imgStyle}>
+        <div className="Result-container container">
+            {this.props.score} / {this.props.data.length}
+        </div>
       </div>
     );
   }
@@ -15,7 +21,8 @@ class Result extends React.Component {
 
 Result = connect((store) => {
     return {
-      score: store.quiz.score
+      score: store.quiz.score,
+      data: store.quiz.data
     }
 })(Result)
 

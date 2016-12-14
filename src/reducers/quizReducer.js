@@ -16,7 +16,7 @@ export default function reducer(state={
             }
             break;
         case '@@router/LOCATION_CHANGE':
-            state = Object.assign({}, state, { step: 0 })
+            state = Object.assign({}, state, { step: 0, score: 0 })
             break;
         default:
             break;
