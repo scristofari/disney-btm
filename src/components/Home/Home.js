@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import btm_logo from './btm_logo.jpg'
+import './Home.css'
 
 const imgStyle = {
   backgroundImage: 'url(' + btm_logo + ')'
@@ -14,7 +15,10 @@ class Home extends React.Component {
         <div className="Home-container container">
           <span>Welcome to the Big Thunder Mountain Quiz.</span>
           <span>Play and win some disney goodies or fast pass.</span>
-          <Link to={`/quiz/1`}>Start</Link>
+        
+          <div className="Home-start">
+            <Link to={`/quiz/1`}>START</Link>
+          </div>
         </div>
       </div>
     );

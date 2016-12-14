@@ -15,10 +15,9 @@ class Result extends React.Component {
     return (
       <div className="Result page" style={imgStyle}>
         <div className="Result-container container">
-            {this.props.score} / {this.props.data.length}
-
+            <span>{this.props.score} / {this.props.data.length}</span>
+            <span>Congratulation, You won:</span>
             <FastPass />
-
             <Link to={`/`}>Return</Link>
         </div>
       </div>

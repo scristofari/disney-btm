@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
 import { connect } from 'react-redux'
 
 import { nextQuiz } from '../../actions/quizAction'
@@ -18,7 +17,7 @@ class Quiz extends React.Component {
       backgroundImage: 'url(' + quiz.image +')'
     }
     const answers = quiz.answers.map((x, i) =>
-      <span key={i} data-score={x.score} onClick={this._answer.bind(this, x.score)}>{x.label}</span>
+      <span className="Quizz-answer" key={i} data-score={x.score} onClick={this._answer.bind(this, x.score)}>{x.label}</span>
     );
 
     return (
@@ -26,9 +25,6 @@ class Quiz extends React.Component {
         <div className="Quiz-container container">
           <span>{quiz.question}</span>
           {answers}
-          <div className="Quiz-return">
-            <Link to={'/'}>Return</Link>
-          </div>
         </div>
       </div>
     );
