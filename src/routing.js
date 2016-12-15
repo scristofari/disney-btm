@@ -18,4 +18,8 @@ export const routes = [{
 { 
     path: '/result',
     component: Result 
+},
+{ 
+    path: '/*',
+    component: Home 
 }];
