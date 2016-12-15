@@ -4,3 +4,10 @@ export function nextQuiz(score = 0) {
         payload: score
     };
 }
+
+export function selectedAnswer(i) {
+    return {
+        type: 'ANSWER_SELECTED',
+        payload: i
+    };
+}

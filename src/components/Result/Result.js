@@ -9,12 +9,8 @@ import './Result.css'
 
 class Result extends React.Component {
   render() {
-    const imgStyle = {
-      backgroundImage: 'url(' + background + ')'
-    };
-
     return (
-      <div className="Result page" style={imgStyle}>
+      <div className="Result page" style={{backgroundImage: 'url(' + background + ')'}}>
         <div className="Result-container container">
             <span className="Result-score">{this.props.score} / {this.props.data.length}</span>
             <span className="Result-title">Congratulation !</span>

@@ -6,7 +6,7 @@ export default [{
     image: btm0,
     answers: [{
         label: "50 km",
-        score: 0,
+        score: 0
     }, {
         label: "40 km",
         score: 0

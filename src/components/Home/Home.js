@@ -4,14 +4,10 @@ import { Link } from 'react-router'
 import btm_logo from './btm_logo.jpg'
 import './Home.css'
 
-const imgStyle = {
-  backgroundImage: 'url(' + btm_logo + ')'
-};
-
 class Home extends React.Component {
   render() {
     return (
-      <div className="Home page" style={imgStyle}>
+      <div className="Home page" style={{backgroundImage: 'url(' + btm_logo + ')'}}>
         <div className="Home-container container">
 
           <span className="Home-title">Welcome to the <br /> Big Thunder Mountain Quiz</span>

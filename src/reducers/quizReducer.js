@@ -4,7 +4,8 @@ export default function reducer(state = {
     step: 0,
     score: 0,
     finished: false,
-    data: data
+    data: data,
+    selected: {}
 }, action) {
     switch (action.type) {
         case 'QUIZ_NEXT':
@@ -23,7 +24,15 @@ export default function reducer(state = {
             state = Object.assign({}, state, {
                 step: 0,
                 score: 0,
-                finished: false
+                finished: false,
+                data: data
+            })
+            break;
+        case 'ANSWER_SELECTED':
+            state = Object.assign({}, state, {
+                selected: {
+                    [state.step] : action.payload
+                }
             })
             break;
         default:
