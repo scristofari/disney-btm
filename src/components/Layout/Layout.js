@@ -14,6 +14,9 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 class Layout extends React.Component
 {
+    componentWillMount() {
+        browserHistory.push('/')
+    }
     render() {
         return (
             <div className="layout">

@@ -1,6 +1,7 @@
 import data from '../fixtures/quiz'
 
 export default function reducer(state = {
+    started: false,
     step: 0,
     score: 0,
     finished: false,
@@ -25,7 +26,8 @@ export default function reducer(state = {
                 step: 0,
                 score: 0,
                 finished: false,
-                data: data
+                data: data,
+                started: false
             })
             break;
         case 'ANSWER_SELECTED':
