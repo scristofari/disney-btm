@@ -11,7 +11,7 @@ class Home extends React.Component {
         <div className="Home-container container">
 
           <span className="Home-title">Welcome to the <br /> Big Thunder Mountain Quiz</span>
-          <span className="Home-description">Play and win some disney goodies or fast pass.</span>
+          <span className="Home-description">Play and win some fast pass.</span>
         
           <div className="Home-start">
             <Link to={`/quiz/1`}>START</Link>
